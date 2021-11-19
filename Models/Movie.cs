@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace NETCOREMANGUONMO.Models
+namespace MvcMovie.Models
 {
     [Table("Movies")]
     public class Movie

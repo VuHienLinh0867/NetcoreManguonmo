@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using NETCOREMANGUONMO.Models;
+using MvcMovie.Models;
 
     public class MvcMovieContext : DbContext
     {
@@ -12,5 +12,5 @@ using NETCOREMANGUONMO.Models;
         {
         }
 
-        public DbSet<NETCOREMANGUONMO.Models.Movie> Movie { get; set; }
+        public DbSet<MvcMovie.Models.Movie> Movie { get; set; }
     }
