@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
+using NETCOREMANGUONMO.Data;
 
-namespace NetcoreManguonmo.Controllers
+namespace NETCOREMANGUONMO.Controllers
 {
     public class MovieController : Controller
     {
