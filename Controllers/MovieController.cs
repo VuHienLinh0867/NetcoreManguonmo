@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MvcMovie.Models;
-using NETCOREMANGUONMO.Data;
+using NETCOREMANGUONMO.Models;
 
-namespace NETCOREMANGUONMO.Controllers
+namespace NetcoreManguonmo.Controllers
 {
     public class MovieController : Controller
     {

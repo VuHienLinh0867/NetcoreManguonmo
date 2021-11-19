@@ -4,12 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NETCOREMANGUONMO.Data;
 
 namespace NetcoreManguonmo.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20211119072730_Create_Table_Movie")]
+    [Migration("20211119101434_Create_Table_Movie")]
     partial class Create_Table_Movie
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,7 +17,7 @@ namespace NetcoreManguonmo.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("MvcMovie.Models.Movie", b =>
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,10 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using NETCOREMANGUONMO.Data;
 
-
-namespace MvcMovie.Models
+namespace NETCOREMANGUONMO.Models
 {
     [Table("Movies")]
     public class Movie

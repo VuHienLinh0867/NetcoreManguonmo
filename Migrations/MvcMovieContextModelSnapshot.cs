@@ -3,7 +3,6 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NETCOREMANGUONMO.Data;
 
 namespace NetcoreManguonmo.Migrations
 {
@@ -16,7 +15,7 @@ namespace NetcoreManguonmo.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("MvcMovie.Models.Movie", b =>
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
