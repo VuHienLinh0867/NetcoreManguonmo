@@ -37,23 +37,6 @@ namespace NetcoreManguonmo.Migrations
 
                     b.ToTable("Movies");
                 });
-
-            modelBuilder.Entity("NETCOREMANGUONMO.Models.Person", b =>
-                {
-                    b.Property<int>("PersonID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("FullName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PersonCode")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("PersonID");
-
-                    b.ToTable("People");
-                });
 #pragma warning restore 612, 618
         }
     }

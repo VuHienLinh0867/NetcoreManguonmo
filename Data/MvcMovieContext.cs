@@ -13,5 +13,4 @@ using NETCOREMANGUONMO.Models;
         }
 
         public DbSet<NETCOREMANGUONMO.Models.Movie> Movie { get; set; }
-        public DbSet<Person> People { get; set; }
     }
