@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace NetcoreManguonmo.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20211119065606_Work with database")]
-    partial class Workwithdatabase
+    [Migration("20211119071540_Create_Table_Movie")]
+    partial class Create_Table_Movie
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
