@@ -26,18 +26,7 @@ public class Startup
         services.AddControllersWithViews();
 
         services.AddDbContext<MvcMovieContext>(options =>
-        {
-            var connectionString = Configuration.GetConnectionString("MvcMovieContext");
-
-            if (Environment.IsDevelopment())
-            {
-                options.UseSqlite(connectionString);
-            }
-            else
-            {
-                options.UseSqlServer(connectionString);
-            }
-        });
+                options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

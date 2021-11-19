@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace NetcoreManguonmo.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20211118080624_Create_Table_Movie")]
-    partial class Create_Table_Movie
+    [Migration("20211119060831_Create_Table_Person")]
+    partial class Create_Table_Person
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -17,7 +17,7 @@ namespace NetcoreManguonmo.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("MvcMovie.Models.Movie", b =>
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,6 +38,23 @@ namespace NetcoreManguonmo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
+                });
+
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.Person", b =>
+                {
+                    b.Property<int>("PersonID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PersonCode")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PersonID");
+
+                    b.ToTable("People");
                 });
 #pragma warning restore 612, 618
         }

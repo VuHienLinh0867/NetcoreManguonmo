@@ -2,14 +2,16 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace NetcoreManguonmo.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    partial class MvcMovieContextModelSnapshot : ModelSnapshot
+    [Migration("20211119060632_Create_Table_Movie")]
+    partial class Create_Table_Movie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,23 +38,6 @@ namespace NetcoreManguonmo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
-                });
-
-            modelBuilder.Entity("NETCOREMANGUONMO.Models.Person", b =>
-                {
-                    b.Property<int>("PersonID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("FullName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PersonCode")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("PersonID");
-
-                    b.ToTable("People");
                 });
 #pragma warning restore 612, 618
         }
