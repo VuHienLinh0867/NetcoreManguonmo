@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NetcoreManguonmo.Migrations
+namespace NETCOREMANGUONMO.Migrations
 {
     public partial class Create_Table_Movie : Migration
     {

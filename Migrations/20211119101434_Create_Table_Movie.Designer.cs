@@ -4,8 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NETCOREMANGUONMO.Data;
 
-namespace NetcoreManguonmo.Migrations
+namespace NETCOREMANGUONMO.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
     [Migration("20211119101434_Create_Table_Movie")]
