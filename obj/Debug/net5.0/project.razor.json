@@ -15639,6 +15639,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\People\\Create.cshtml",
+      "TargetPath": "Views\\People\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Student\\Create.cshtml",
       "TargetPath": "Views\\Student\\Create.cshtml",
       "FileKind": "mvc"
@@ -15646,6 +15651,21 @@
     {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Product\\Delete.cshtml",
       "TargetPath": "Views\\Product\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\People\\Edit.cshtml",
+      "TargetPath": "Views\\People\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\People\\Details.cshtml",
+      "TargetPath": "Views\\People\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\HoaDon\\Edit.cshtml",
+      "TargetPath": "Views\\HoaDon\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15674,8 +15694,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\KhachHang\\Delete.cshtml",
+      "TargetPath": "Views\\KhachHang\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Person\\Delete.cshtml",
       "TargetPath": "Views\\Person\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\SinhVien\\Edit.cshtml",
+      "TargetPath": "Views\\SinhVien\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\KhachHang\\Create.cshtml",
+      "TargetPath": "Views\\KhachHang\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15699,6 +15734,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\SinhVien\\Delete.cshtml",
+      "TargetPath": "Views\\SinhVien\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Employee\\Index.cshtml",
       "TargetPath": "Views\\Employee\\Index.cshtml",
       "FileKind": "mvc"
@@ -15719,8 +15759,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\SinhVien\\Index.cshtml",
+      "TargetPath": "Views\\SinhVien\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\SinhVien\\Create.cshtml",
+      "TargetPath": "Views\\SinhVien\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\HoaDon\\Index.cshtml",
+      "TargetPath": "Views\\HoaDon\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\KhachHang\\Edit.cshtml",
+      "TargetPath": "Views\\KhachHang\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\HoaDon\\Create.cshtml",
+      "TargetPath": "Views\\HoaDon\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15784,8 +15849,43 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\People\\Delete.cshtml",
+      "TargetPath": "Views\\People\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\HoaDon\\Delete.cshtml",
+      "TargetPath": "Views\\HoaDon\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\KhachHang\\Index.cshtml",
+      "TargetPath": "Views\\KhachHang\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\People\\Index.cshtml",
+      "TargetPath": "Views\\People\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\KhachHang\\Details.cshtml",
+      "TargetPath": "Views\\KhachHang\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Employee\\Create.cshtml",
       "TargetPath": "Views\\Employee\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\HoaDon\\Details.cshtml",
+      "TargetPath": "Views\\HoaDon\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\SinhVien\\Details.cshtml",
+      "TargetPath": "Views\\SinhVien\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],

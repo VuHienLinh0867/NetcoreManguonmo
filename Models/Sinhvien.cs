@@ -1,6 +1,6 @@
 namespace NETCOREMANGUONMO.Models
 {
-    public class Sinhvien : People
+    public class SinhVien : People
     {
         public string University { get; set; }
         public string Address { get; set; }

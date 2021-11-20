@@ -20,6 +20,9 @@ namespace NETCOREMANGUONMO.Data
         public DbSet<NETCOREMANGUONMO.Models.Student> Student { get; set; }
         public DbSet<NETCOREMANGUONMO.Models.Employee> Employee { get; set; }
         public DbSet<NETCOREMANGUONMO.Models.Product> Product { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.KhachHang> KhachHang { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.HoaDon> HoaDon { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.SinhVien> SinhVien { get; set; }
     }
 
 }

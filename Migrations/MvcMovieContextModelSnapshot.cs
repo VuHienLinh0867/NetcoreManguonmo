@@ -32,6 +32,39 @@ namespace NetcoreManguonmo.Migrations
                     b.ToTable("Employee");
                 });
 
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.HoaDon", b =>
+                {
+                    b.Property<int>("HoaDonID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("KhachHangID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("NgayTao")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("HoaDonID");
+
+                    b.HasIndex("KhachHangID");
+
+                    b.ToTable("HoaDons");
+                });
+
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.KhachHang", b =>
+                {
+                    b.Property<int>("KhachHangID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("TenKhachHang")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("KhachHangID");
+
+                    b.ToTable("KhachHangs");
+                });
+
             modelBuilder.Entity("NETCOREMANGUONMO.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
@@ -61,6 +94,10 @@ namespace NetcoreManguonmo.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("FullName")
                         .HasColumnType("TEXT");
 
@@ -70,6 +107,8 @@ namespace NetcoreManguonmo.Migrations
                     b.HasKey("PeopleID");
 
                     b.ToTable("People");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("People");
                 });
 
             modelBuilder.Entity("NETCOREMANGUONMO.Models.Person", b =>
@@ -118,6 +157,40 @@ namespace NetcoreManguonmo.Migrations
                     b.HasKey("StudentID");
 
                     b.ToTable("Student");
+                });
+
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.SinhVien", b =>
+                {
+                    b.HasBaseType("NETCOREMANGUONMO.Models.People");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("University")
+                        .HasColumnType("TEXT");
+
+                    b.ToTable("People");
+
+                    b.HasDiscriminator().HasValue("SinhVien");
+                });
+
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.HoaDon", b =>
+                {
+                    b.HasOne("NETCOREMANGUONMO.Models.KhachHang", "KhachHang")
+                        .WithMany("HoaDons")
+                        .HasForeignKey("KhachHangID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("KhachHang");
+                });
+
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.KhachHang", b =>
+                {
+                    b.Navigation("HoaDons");
                 });
 #pragma warning restore 612, 618
         }
