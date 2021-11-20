@@ -16,6 +16,10 @@ namespace NETCOREMANGUONMO.Data
 
         public DbSet<NETCOREMANGUONMO.Models.Movie> Movie { get; set; }
         public DbSet<People> People { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.Person> Person { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.Student> Student { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.Employee> Employee { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.Product> Product { get; set; }
     }
 
 }
