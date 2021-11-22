@@ -23,6 +23,8 @@ namespace NETCOREMANGUONMO.Data
         public DbSet<NETCOREMANGUONMO.Models.KhachHang> KhachHang { get; set; }
         public DbSet<NETCOREMANGUONMO.Models.HoaDon> HoaDon { get; set; }
         public DbSet<NETCOREMANGUONMO.Models.SinhVien> SinhVien { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.NhanVien> NhanVien { get; set; }
+        public DbSet<NETCOREMANGUONMO.Models.DonHang> DonHang { get; set; }
     }
 
 }

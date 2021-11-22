@@ -210,3 +210,13 @@ F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\SinhVien\Delete.csh
 F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\SinhVien\Details.cshtml.g.cs
 F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\SinhVien\Edit.cshtml.g.cs
 F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\SinhVien\Index.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\NhanVien\Create.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\NhanVien\Delete.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\NhanVien\Details.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\NhanVien\Edit.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\NhanVien\Index.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\DonHang\Create.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\DonHang\Delete.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\DonHang\Details.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\DonHang\Edit.cshtml.g.cs
+F:\DemoNetcore\NetcoreManguonmo\obj\Debug\net5.0\Razor\Views\DonHang\Index.cshtml.g.cs

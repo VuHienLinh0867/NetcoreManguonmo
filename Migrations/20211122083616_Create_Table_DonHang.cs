@@ -2,7 +2,7 @@
 
 namespace NetcoreManguonmo.Migrations
 {
-    public partial class Create_Table_KhachHang : Migration
+    public partial class Create_Table_DonHang : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -16,6 +16,25 @@ namespace NetcoreManguonmo.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.DonHang", b =>
+                {
+                    b.Property<int>("DonHangID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("NgayTao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("NhanVienID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("DonHangID");
+
+                    b.HasIndex("NhanVienID");
+
+                    b.ToTable("DonHangs");
+                });
+
             modelBuilder.Entity("NETCOREMANGUONMO.Models.Employee", b =>
                 {
                     b.Property<string>("EmployeeID")
@@ -86,6 +105,20 @@ namespace NetcoreManguonmo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
+                });
+
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.NhanVien", b =>
+                {
+                    b.Property<int>("NhanVienID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("TenNhanVien")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("NhanVienID");
+
+                    b.ToTable("NhanViens");
                 });
 
             modelBuilder.Entity("NETCOREMANGUONMO.Models.People", b =>
@@ -177,6 +210,17 @@ namespace NetcoreManguonmo.Migrations
                     b.HasDiscriminator().HasValue("SinhVien");
                 });
 
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.DonHang", b =>
+                {
+                    b.HasOne("NETCOREMANGUONMO.Models.NhanVien", "NhanVien")
+                        .WithMany("DonHangs")
+                        .HasForeignKey("NhanVienID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("NhanVien");
+                });
+
             modelBuilder.Entity("NETCOREMANGUONMO.Models.HoaDon", b =>
                 {
                     b.HasOne("NETCOREMANGUONMO.Models.KhachHang", "KhachHang")
@@ -191,6 +235,11 @@ namespace NetcoreManguonmo.Migrations
             modelBuilder.Entity("NETCOREMANGUONMO.Models.KhachHang", b =>
                 {
                     b.Navigation("HoaDons");
+                });
+
+            modelBuilder.Entity("NETCOREMANGUONMO.Models.NhanVien", b =>
+                {
+                    b.Navigation("DonHangs");
                 });
 #pragma warning restore 612, 618
         }
