@@ -27,7 +27,7 @@ namespace NetcoreManguonmo.Controllers
         }
 
         // GET: HoaDon/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
@@ -70,7 +70,7 @@ namespace NetcoreManguonmo.Controllers
         }
 
         // GET: HoaDon/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
@@ -91,7 +91,7 @@ namespace NetcoreManguonmo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HoaDonID,KhachHangID,NgayTao")] HoaDon hoaDon)
+        public async Task<IActionResult> Edit(string id, [Bind("HoaDonID,KhachHangID,NgayTao")] HoaDon hoaDon)
         {
             if (id != hoaDon.HoaDonID)
             {
@@ -123,7 +123,7 @@ namespace NetcoreManguonmo.Controllers
         }
 
         // GET: HoaDon/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
@@ -144,7 +144,7 @@ namespace NetcoreManguonmo.Controllers
         // POST: HoaDon/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var hoaDon = await _context.HoaDon.FindAsync(id);
             _context.HoaDon.Remove(hoaDon);
@@ -152,7 +152,7 @@ namespace NetcoreManguonmo.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool HoaDonExists(int id)
+        private bool HoaDonExists(string id)
         {
             return _context.HoaDon.Any(e => e.HoaDonID == id);
         }

@@ -56,12 +56,18 @@ namespace NetcoreManguonmo.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("StudentID,StudentName,Address")] Student student)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(student);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            try{
+                if (ModelState.IsValid)
+                {
+                    _context.Add(student);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
+            catch (Exception ex){
+                ModelState.AddModelError("", "Khoa chinh bi trung:" + ex);
+            }
+
             return View(student);
         }
 

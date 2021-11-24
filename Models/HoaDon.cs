@@ -8,8 +8,10 @@ namespace NETCOREMANGUONMO.Models
     public class HoaDon
     {
         [Key]
-        public int HoaDonID { get; set; }
-        public int KhachHangID { get; set; }
+        [Required (ErrorMessage = "HoaDonID is require")]
+        public string HoaDonID { get; set; }
+        public string KhachHangID { get; set; }
+        [DataType(DataType.Date)]
         public DateTime NgayTao { get; set; }
         public KhachHang KhachHang { get; set; }
     }

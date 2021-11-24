@@ -15644,16 +15644,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\NhanVien\\Delete.cshtml",
-      "TargetPath": "Views\\NhanVien\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\DonHang\\Index.cshtml",
-      "TargetPath": "Views\\DonHang\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Student\\Create.cshtml",
       "TargetPath": "Views\\Student\\Create.cshtml",
       "FileKind": "mvc"
@@ -15674,11 +15664,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\DonHang\\Create.cshtml",
-      "TargetPath": "Views\\DonHang\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\HoaDon\\Edit.cshtml",
       "TargetPath": "Views\\HoaDon\\Edit.cshtml",
       "FileKind": "mvc"
@@ -15689,11 +15674,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\DonHang\\Delete.cshtml",
-      "TargetPath": "Views\\DonHang\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Person\\Details.cshtml",
       "TargetPath": "Views\\Person\\Details.cshtml",
       "FileKind": "mvc"
@@ -15701,11 +15681,6 @@
     {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Employee\\Delete.cshtml",
       "TargetPath": "Views\\Employee\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\NhanVien\\Create.cshtml",
-      "TargetPath": "Views\\NhanVien\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15754,11 +15729,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\NhanVien\\Details.cshtml",
-      "TargetPath": "Views\\NhanVien\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Movie\\Delete.cshtml",
       "TargetPath": "Views\\Movie\\Delete.cshtml",
       "FileKind": "mvc"
@@ -15779,11 +15749,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\DonHang\\Details.cshtml",
-      "TargetPath": "Views\\DonHang\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Movie\\Create.cshtml",
       "TargetPath": "Views\\Movie\\Create.cshtml",
       "FileKind": "mvc"
@@ -15791,11 +15756,6 @@
     {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Person\\Index.cshtml",
       "TargetPath": "Views\\Person\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\DonHang\\Edit.cshtml",
-      "TargetPath": "Views\\DonHang\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15869,11 +15829,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\NhanVien\\Edit.cshtml",
-      "TargetPath": "Views\\NhanVien\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Employee\\Details.cshtml",
       "TargetPath": "Views\\Employee\\Details.cshtml",
       "FileKind": "mvc"
@@ -15886,11 +15841,6 @@
     {
       "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "f:\\DemoNetcore\\NetcoreManguonmo\\Views\\NhanVien\\Index.cshtml",
-      "TargetPath": "Views\\NhanVien\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

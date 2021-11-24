@@ -26,7 +26,7 @@ namespace NetcoreManguonmo.Controllers
         }
 
         // GET: KhachHang/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
@@ -66,7 +66,7 @@ namespace NetcoreManguonmo.Controllers
         }
 
         // GET: KhachHang/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace NetcoreManguonmo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("KhachHangID,TenKhachHang")] KhachHang khachHang)
+        public async Task<IActionResult> Edit(string id, [Bind("KhachHangID,TenKhachHang")] KhachHang khachHang)
         {
             if (id != khachHang.KhachHangID)
             {
@@ -117,7 +117,7 @@ namespace NetcoreManguonmo.Controllers
         }
 
         // GET: KhachHang/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
@@ -137,7 +137,7 @@ namespace NetcoreManguonmo.Controllers
         // POST: KhachHang/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string id)
         {
             var khachHang = await _context.KhachHang.FindAsync(id);
             _context.KhachHang.Remove(khachHang);
@@ -145,7 +145,7 @@ namespace NetcoreManguonmo.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool KhachHangExists(int id)
+        private bool KhachHangExists(string id)
         {
             return _context.KhachHang.Any(e => e.KhachHangID == id);
         }

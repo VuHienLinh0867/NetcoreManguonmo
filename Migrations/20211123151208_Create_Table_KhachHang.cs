@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NetcoreManguonmo.Migrations
 {
-    public partial class Create_Table_NhanVien : Migration
+    public partial class Create_Table_KhachHang : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,8 +24,7 @@ namespace NetcoreManguonmo.Migrations
                 name: "KhachHangs",
                 columns: table => new
                 {
-                    KhachHangID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    KhachHangID = table.Column<string>(type: "TEXT", nullable: false),
                     TenKhachHang = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
@@ -47,19 +46,6 @@ namespace NetcoreManguonmo.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Movies", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "NhanViens",
-                columns: table => new
-                {
-                    NhanVienID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    TenNhanVien = table.Column<string>(type: "TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_NhanViens", x => x.NhanVienID);
                 });
 
             migrationBuilder.CreateTable(
@@ -123,9 +109,8 @@ namespace NetcoreManguonmo.Migrations
                 name: "HoaDons",
                 columns: table => new
                 {
-                    HoaDonID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    KhachHangID = table.Column<int>(type: "INTEGER", nullable: false),
+                    HoaDonID = table.Column<string>(type: "TEXT", nullable: false),
+                    KhachHangID = table.Column<string>(type: "TEXT", nullable: true),
                     NgayTao = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -136,33 +121,8 @@ namespace NetcoreManguonmo.Migrations
                         column: x => x.KhachHangID,
                         principalTable: "KhachHangs",
                         principalColumn: "KhachHangID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "DonHangs",
-                columns: table => new
-                {
-                    DonHangID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    NhanVienID = table.Column<int>(type: "INTEGER", nullable: false),
-                    NgayTao = table.Column<DateTime>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DonHangs", x => x.DonHangID);
-                    table.ForeignKey(
-                        name: "FK_DonHangs_NhanViens_NhanVienID",
-                        column: x => x.NhanVienID,
-                        principalTable: "NhanViens",
-                        principalColumn: "NhanVienID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_DonHangs_NhanVienID",
-                table: "DonHangs",
-                column: "NhanVienID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HoaDons_KhachHangID",
@@ -172,9 +132,6 @@ namespace NetcoreManguonmo.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "DonHangs");
-
             migrationBuilder.DropTable(
                 name: "Employee");
 
@@ -195,9 +152,6 @@ namespace NetcoreManguonmo.Migrations
 
             migrationBuilder.DropTable(
                 name: "Student");
-
-            migrationBuilder.DropTable(
-                name: "NhanViens");
 
             migrationBuilder.DropTable(
                 name: "KhachHangs");
