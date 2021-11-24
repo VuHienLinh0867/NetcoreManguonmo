@@ -20,9 +20,30 @@ namespace NetcoreManguonmo.Controllers
         }
 
         // GET: Student
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string AddressStudent, string searchString)
         {
-            return View(await _context.Student.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Student
+                                    orderby m.Address
+                                    select m.Address;
+             var studentList = from m in _context.Student
+                 select m;
+            
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                studentList = studentList.Where(m => m.StudentName.Contains(searchString));
+            }
+            if (!string.IsNullOrEmpty(AddressStudent))
+            {
+                studentList = studentList.Where(x => x.Address == AddressStudent);
+            }
+
+            var StudentAddress  = new StudentAddress
+            {
+                Address = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Student = await studentList.ToListAsync()
+            };
+            return View(StudentAddress);
         }
 
         // GET: Student/Details/5
@@ -70,7 +91,7 @@ namespace NetcoreManguonmo.Controllers
 
             return View(student);
         }
-
+        
         // GET: Student/Edit/5
         public async Task<IActionResult> Edit(string id)
         {

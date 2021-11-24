@@ -20,9 +20,32 @@ namespace NETCOREMANGUONMO.Controllers
         }
 
         // GET: Movie
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string movieGenre, string searchString)
         {
-            return View(await _context.Movie.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Movie
+                                    orderby m.Genre
+                                    select m.Genre;
+
+            //select danh sach ban ghi trong database
+            var moviesList = from m in _context.Movie
+                 select m;
+            
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                moviesList = moviesList.Where(m => m.Title.Contains(searchString));
+            }
+            if (!string.IsNullOrEmpty(movieGenre))
+            {
+                moviesList = moviesList.Where(x => x.Genre == movieGenre);
+            }
+            var movieGenreVM = new MovieGenreViewModel
+            {
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Movies = await moviesList.ToListAsync()
+            };
+            //tra ve list movie voi dien kien Title co chua tu khoa tim kiem (bat dong bo)
+            return View(movieGenreVM);
         }
 
         // GET: Movie/Details/5
