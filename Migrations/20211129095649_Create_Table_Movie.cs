@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NetcoreManguonmo.Migrations
 {
-    public partial class Create_Table_KhachHang : Migration
+    public partial class Create_Table_Movie : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -41,7 +41,8 @@ namespace NetcoreManguonmo.Migrations
                     Title = table.Column<string>(type: "TEXT", nullable: true),
                     ReleaseDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Genre = table.Column<string>(type: "TEXT", nullable: true),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: false)
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Rating = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

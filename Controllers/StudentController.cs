@@ -38,12 +38,12 @@ namespace NetcoreManguonmo.Controllers
                 studentList = studentList.Where(x => x.Address == AddressStudent);
             }
 
-            var StudentAddress  = new StudentAddress
+            var addressStudent  = new StudentAddress
             {
                 Address = new SelectList(await genreQuery.Distinct().ToListAsync()),
                 Student = await studentList.ToListAsync()
             };
-            return View(StudentAddress);
+            return View(addressStudent);
         }
 
         // GET: Student/Details/5
@@ -77,18 +77,12 @@ namespace NetcoreManguonmo.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("StudentID,StudentName,Address")] Student student)
         {
-            try{
                 if (ModelState.IsValid)
                 {
                     _context.Add(student);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
-            }
-            catch (Exception ex){
-                ModelState.AddModelError("", "Khoa chinh bi trung:" + ex);
-            }
-
             return View(student);
         }
         

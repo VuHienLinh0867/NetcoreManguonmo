@@ -9,8 +9,8 @@ using NETCOREMANGUONMO.Data;
 namespace NetcoreManguonmo.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20211123151657_Create_Table_HoaDon")]
-    partial class Create_Table_HoaDon
+    [Migration("20211129095649_Create_Table_Movie")]
+    partial class Create_Table_Movie
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -75,6 +75,9 @@ namespace NetcoreManguonmo.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Rating")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")

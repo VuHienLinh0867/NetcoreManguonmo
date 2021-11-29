@@ -9,8 +9,8 @@ using NETCOREMANGUONMO.Data;
 namespace NetcoreManguonmo.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20211124064431_Create_Table_Movie")]
-    partial class Create_Table_Movie
+    [Migration("20211129151343_Create_Table_Student")]
+    partial class Create_Table_Student
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,15 +72,24 @@ namespace NetcoreManguonmo.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<string>("Rating")
+                        .IsRequired()
+                        .HasMaxLength(5)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(60)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -149,6 +158,9 @@ namespace NetcoreManguonmo.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Address")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PhoneNumber")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("StudentName")

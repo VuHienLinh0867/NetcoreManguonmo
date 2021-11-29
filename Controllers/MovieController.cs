@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using NETCOREMANGUONMO.Data;
 using NETCOREMANGUONMO.Models;
 
-namespace NETCOREMANGUONMO.Controllers
+namespace NetcoreManguonmo.Controllers
 {
     public class MovieController : Controller
     {
@@ -22,11 +22,10 @@ namespace NETCOREMANGUONMO.Controllers
         // GET: Movie
         public async Task<IActionResult> Index(string movieGenre, string searchString)
         {
-            // Use LINQ to get list of genres.
+            // sử dụng LinQ để select ra Genre.
             IQueryable<string> genreQuery = from m in _context.Movie
-                                    orderby m.Genre
-                                    select m.Genre;
-
+                                        orderby m.Genre
+                                        select m.Genre;
             //select danh sach ban ghi trong database
             var moviesList = from m in _context.Movie
                  select m;
@@ -77,7 +76,7 @@ namespace NETCOREMANGUONMO.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -109,7 +108,7 @@ namespace NETCOREMANGUONMO.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (id != movie.Id)
             {
