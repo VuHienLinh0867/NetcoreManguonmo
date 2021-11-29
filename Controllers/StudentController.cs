@@ -75,7 +75,7 @@ namespace NetcoreManguonmo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentID,StudentName,Address")] Student student)
+        public async Task<IActionResult> Create([Bind("StudentID,StudentName,Address,PhoneNumber")] Student student)
         {
                 if (ModelState.IsValid)
                 {
@@ -107,7 +107,7 @@ namespace NetcoreManguonmo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("StudentID,StudentName,Address")] Student student)
+        public async Task<IActionResult> Edit(string id, [Bind("StudentID,StudentName,Address,PhoneNumber")] Student student)
         {
             if (id != student.StudentID)
             {

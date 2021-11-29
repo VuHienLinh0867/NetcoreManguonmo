@@ -153,15 +153,22 @@ namespace NetcoreManguonmo.Migrations
             modelBuilder.Entity("NETCOREMANGUONMO.Models.Student", b =>
                 {
                     b.Property<string>("StudentID")
+                        .HasMaxLength(15)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(60)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(10)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("StudentName")
+                        .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.HasKey("StudentID");

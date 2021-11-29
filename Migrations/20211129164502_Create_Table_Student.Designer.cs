@@ -9,7 +9,7 @@ using NETCOREMANGUONMO.Data;
 namespace NetcoreManguonmo.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20211129151343_Create_Table_Student")]
+    [Migration("20211129164502_Create_Table_Student")]
     partial class Create_Table_Student
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -155,15 +155,22 @@ namespace NetcoreManguonmo.Migrations
             modelBuilder.Entity("NETCOREMANGUONMO.Models.Student", b =>
                 {
                     b.Property<string>("StudentID")
+                        .HasMaxLength(15)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(60)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(10)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("StudentName")
+                        .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.HasKey("StudentID");
