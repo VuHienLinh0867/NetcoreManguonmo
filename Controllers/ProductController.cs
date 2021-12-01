@@ -8,11 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using NETCOREMANGUONMO.Data;
 using NETCOREMANGUONMO.Models;
 
-namespace NetcoreManguonmo.Controllers
+namespace   NETCOREMANGUONMO.Controllers
 {
     public class ProductController : Controller
     {
         private readonly MvcMovieContext _context;
+        private readonly StringProduct strPro = new StringProduct();
 
         public ProductController(MvcMovieContext context)
         {
@@ -46,6 +47,12 @@ namespace NetcoreManguonmo.Controllers
         // GET: Product/Create
         public IActionResult Create()
         {
+            var model = _context.Product.ToList();
+            if(model.Count() == 0) ViewBag.Student = "N001";
+            else{
+            var newKey = model.OrderByDescending(m => m.ProductID).FirstOrDefault().ProductID;
+            ViewBag.ProductKey = strPro.GenerateKey(newKey);
+            }
             return View();
         }
 

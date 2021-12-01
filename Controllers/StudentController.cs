@@ -66,6 +66,7 @@ namespace NetcoreManguonmo.Controllers
 
         // GET: Student/Create
         public IActionResult Create()
+
         {
             return View();
         }
